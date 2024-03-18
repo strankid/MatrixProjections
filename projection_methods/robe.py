@@ -36,7 +36,7 @@ class RobeApproximator(approximator.Approximator):
       g = g.reshape(*w_shape)
       return g
     
-    def approximate(self, optim_mat: np.ndarray, nb_params_share: float = 0.5):
+    def approximate(self, optim_mat: np.ndarray, nb_params_share: float = 0.03125):
         target_size = int(optim_mat.size * nb_params_share)
         original_shape = optim_mat.shape
         layer_scale = optim_mat.std()

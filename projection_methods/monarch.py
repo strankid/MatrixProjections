@@ -66,5 +66,5 @@ class  MonarchApproximator(approximator.Approximator):
         res_dict["left_mat"] = w1_bfly_projected.numpy()
         res_dict["right_mat"] = w2_bfly_projected.numpy()
         res_dict["approx_mat_dense"] = bfly_projected.numpy()
-        res_dict["nb_parameters"] = w1_bfly_projected.size() + w2_bfly_projected.size()
+        res_dict["nb_parameters"] = np.prod(w1_bfly_projected.shape) + np.prod(w2_bfly_projected.shape)
         return res_dict

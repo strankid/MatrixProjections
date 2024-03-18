@@ -5,7 +5,7 @@ class SVDApproximator(approximator.Approximator):
     def get_name(self):
         return "SVDApproximator"
 
-    def approximate(self, optim_mat: np.ndarray, nb_params_share: float = 0.5):
+    def approximate(self, optim_mat: np.ndarray, nb_params_share: float = 0.03125):
         assert len(optim_mat.shape) == 2, "Can only handle matrices for LR approximation"
 
         print("checkpoint 1")
